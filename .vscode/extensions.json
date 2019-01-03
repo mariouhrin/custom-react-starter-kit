@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "EditorConfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "atishay-jain.all-autocomplete",
+    "dbaeumer.vscode-eslint",
+    "humao.rest-client",
+    "shinnn.stylelint",
+    "redhat.vscode-yaml"
+  ]
+}
