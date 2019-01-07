@@ -1,4 +1,4 @@
-## React start kit 
+## React starter kit with Hooks and React Hot Loader !
 
 * React 16.7 (with Hooks) 
 * React Hot Loader (4.6+)
