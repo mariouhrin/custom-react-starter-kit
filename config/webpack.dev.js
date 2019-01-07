@@ -1,23 +1,28 @@
-const merge = require("webpack-merge");
-const webpack = require("webpack");
+const merge = require('webpack-merge');
+const webpack = require('webpack');
 
-const common = require("./webpack.common");
-const stylesRules = require("./config.utils");
+const common = require('./webpack.common');
+const stylesRules = require('./config.utils');
 
-module.exports = env => {
+module.exports = (env) => {
   return merge(common, {
-    mode: "development",
-    devtool: "inline-source-map",
+    mode: 'development',
+    devtool: 'inline-source-map',
     devServer: {
-      contentBase: "./dist",
+      contentBase: './dist',
       hot: true
     },
+    resolve: {
+      alias: {
+        'react-dom': '@hot-loader/react-dom'
+      }
+    },
     module: {
-      rules: [stylesRules(env)]
+      rules: stylesRules(env)
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
     output: {
-      filename: "[name].bundle.[hash].js"
+      filename: '[name].bundle.[hash].js'
     }
   });
 };

@@ -1,11 +1,35 @@
-import React from 'react';
-import logo from '../../assets/logo.png';
+import React, { Suspense, lazy, useState } from 'react';
+import { hot } from 'react-hot-loader/root';
+import { setConfig } from 'react-hot-loader';
 
-const Root = () => (
-  <article className="root">
-    <h1>This is React starter 16.7 version with webpack 4+ and babel 7+</h1>
-    <img src={logo} alt="logo" />
-  </article>
-);
+import NavBar from '../components/NavBar';
 
-export default Root;
+import 'purecss/build/pure.css';
+
+const Image = lazy(() => import('./../components/Image'));
+
+const Root = () => {
+  const [toggle, setToggle] = useState(false);
+
+  return (
+    <article className="root">
+      <NavBar />
+      <button type="button" onClick={() => setToggle(!toggle)}>
+        Show Image
+      </button>
+      <h1>This is React starter with 16.7 version, webpack 4+ and babel 7+</h1>
+      {toggle && (
+        <Suspense fallback={<div>loading...</div>}>
+          <Image />
+        </Suspense>
+      )}
+    </article>
+  );
+};
+
+setConfig({
+  ignoreSFC: true,
+  pureRender: true
+});
+
+export default hot(Root);

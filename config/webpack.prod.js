@@ -43,7 +43,7 @@ module.exports = (env) => {
       }
     },
     module: {
-      rules: [stylesRules(env)]
+      rules: stylesRules(env)
     },
     output: {
       filename: '[name].bundle.[contenthash].js'

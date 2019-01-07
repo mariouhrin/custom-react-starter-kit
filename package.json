@@ -33,6 +33,7 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.3.1",
@@ -71,12 +72,12 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@hot-loader/react-dom": "16.7.0-alpha.2",
     "axios": "^0.18.0",
     "dotenv-webpack": "^1.5.7",
     "prop-types": "^15.6.2",
     "purecss": "^1.0.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "16.7.0-alpha.2",
     "react-hot-loader": "^4.6.3"
   },
   "proxy": "http://localhost:3010",
