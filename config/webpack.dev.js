@@ -12,11 +12,6 @@ module.exports = (env) => {
       contentBase: './dist',
       hot: true
     },
-    resolve: {
-      alias: {
-        'react-dom': '@hot-loader/react-dom'
-      }
-    },
     module: {
       rules: stylesRules(env)
     },
