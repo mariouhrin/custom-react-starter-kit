@@ -73,12 +73,12 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "@hot-loader/react-dom": "16.8.1",
     "axios": "^0.18.0",
     "dotenv-webpack": "^1.5.7",
     "prop-types": "^15.6.2",
     "purecss": "^1.0.0",
     "react": "16.8.1",
+    "react-dom": "npm:@hot-loader/react-dom@16.8.1",
     "react-hot-loader": "^4.6.5"
   },
   "proxy": "http://localhost:3010",
