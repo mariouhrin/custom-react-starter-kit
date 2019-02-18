@@ -14,7 +14,7 @@
   "author": "mario uhrin",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --env.development --open --config ./config/webpack.dev.js",
+    "start": "webpack-dev-server --env.development --port 8090 --open --config ./config/webpack.dev.js",
     "build": "webpack --env.production --config ./config/webpack.prod.js",
     "precommit": "lint-staged"
   },
@@ -79,7 +79,8 @@
     "purecss": "^1.0.0",
     "react": "16.8.1",
     "react-dom": "npm:@hot-loader/react-dom@16.8.1",
-    "react-hot-loader": "^4.6.5"
+    "react-hot-loader": "^4.6.5",
+    "react-router-dom": "^4.3.1"
   },
   "proxy": "http://localhost:3010",
   "browserslist": [

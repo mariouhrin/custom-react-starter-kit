@@ -1,31 +1,23 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { setConfig } from 'react-hot-loader';
-
-import NavBar from '../components/NavBar';
-
+import { Route, Switch } from 'react-router-dom';
 import 'purecss/build/pure.css';
 
-const Image = lazy(() => import('./../components/Image'));
+import { NavBar, ToggleLazyImage, Home } from '../components';
 
-const Root = () => {
-  const [toggle, setToggle] = useState(false);
-
-  return (
-    <article className="root">
-      <NavBar />
-      <button type="button" onClick={() => setToggle(!toggle)}>
-        Show Image
-      </button>
-      <h1>This is React starter with 16.7 version, webpack 4+ and babel 7+</h1>
-      {toggle && (
-        <Suspense fallback={<div>loading...</div>}>
-          <Image />
-        </Suspense>
-      )}
-    </article>
-  );
-};
+const Root = () => (
+  <article className="root">
+    <NavBar />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/demo1" component={ToggleLazyImage} />
+      <Route path="/demo2" component={null} />
+      <Route path="/demo3" component={null} />
+      <Route path="/demo4" component={null} />
+    </Switch>
+  </article>
+);
 
 setConfig({
   ignoreSFC: true,

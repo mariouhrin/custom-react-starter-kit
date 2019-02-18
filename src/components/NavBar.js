@@ -1,20 +1,34 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const NavBar = () => (
+export const NavBar = () => (
   <div className="pure-menu pure-menu-horizontal">
-    <p className="pure-menu-heading pure-menu-link">BRAND</p>
-    <ul className="pure-menu-list">
-      <li className="pure-menu-item">
-        <p className="pure-menu-link">News</p>
-      </li>
-      <li className="pure-menu-item">
-        <p className="pure-menu-link">Sports</p>
-      </li>
-      <li className="pure-menu-item">
-        <p className="pure-menu-link">Finance</p>
-      </li>
+    <ul className="pure-menu-list" style={{ display: 'flex' }}>
+      <NavLink style={{ marginRight: '20%' }} to="/">
+        <li className="pure-menu-item">
+          <p className="pure-menu-link">Home</p>
+        </li>
+      </NavLink>
+      <NavLink to="/demo1">
+        <li className="pure-menu-item">
+          <p className="pure-menu-link">Demo 1</p>
+        </li>
+      </NavLink>
+      <NavLink to="/demo2">
+        <li className="pure-menu-item">
+          <p className="pure-menu-link">Demo 2</p>
+        </li>
+      </NavLink>
+      <NavLink to="/demo3">
+        <li className="pure-menu-item">
+          <p className="pure-menu-link">Demo 3</p>
+        </li>
+      </NavLink>
+      <NavLink to="/demo4">
+        <li className="pure-menu-item">
+          <p className="pure-menu-link">Demo 4</p>
+        </li>
+      </NavLink>
     </ul>
   </div>
 );
-
-export default NavBar;
