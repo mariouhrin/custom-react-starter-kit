@@ -15,6 +15,7 @@
   },
   "rules": {
     "no-console": "off",
+    "no-alert": "off",
     "react/prop-types": "off",
     "import/prefer-default-export": "off",
     "dot-notation": "off",
